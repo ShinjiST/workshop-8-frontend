@@ -1,0 +1,18 @@
+/* Добавьте это в конец вашего index.css */
+
+.accordion-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 300ms ease-out, opacity 300ms ease-out;
+}
+
+.accordion-wrapper.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.accordion-inner {
+  overflow: hidden;
+  min-height: 0; /* Важно для Grid анимации */
+}
